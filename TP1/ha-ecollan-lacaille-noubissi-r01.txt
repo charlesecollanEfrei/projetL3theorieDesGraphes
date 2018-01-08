@@ -1,0 +1,106 @@
+Lecture de tableau de contraintes
+Nombre de taches :  9
+Durees : 
+
+A B C D E F G H I 
+2 4 4 2 3 3 1 1 2 
+
+Contraintes :
+D --[2]--> A
+A --[2]--> B
+A --[2]--> D
+Creation de circuit detecte, suppression de l'arc de A a D
+B --[4]--> D
+Creation de circuit detecte, suppression de l'arc de B a D
+C --[4]--> D
+H --[1]--> D
+D --[2]--> E
+H --[1]--> F
+I --[2]--> F
+E --[3]--> F
+D --[2]--> F
+E --[3]--> G
+D --[2]--> G
+H --[1]--> G
+D --[2]--> H
+Creation de circuit detecte, suppression de l'arc de D a H
+D --[2]--> I
+E --[3]--> I
+F --[3]--> I
+Creation de circuit detecte, suppression de l'arc de F a I
+a --[0]--> C
+a --[0]--> H
+B --[4]--> z
+F --[3]--> z
+G --[1]--> z
+------------------
+Matrice d'adjacence
+------------------
+  A B C D E F G H I a z 
+A 0 1 0 0 0 0 0 0 0 0 0 
+B 0 0 0 0 0 0 0 0 0 0 1 
+C 0 0 0 1 0 0 0 0 0 0 0 
+D 1 0 0 0 1 1 1 0 1 0 0 
+E 0 0 0 0 0 1 1 0 1 0 0 
+F 0 0 0 0 0 0 0 0 0 0 1 
+G 0 0 0 0 0 0 0 0 0 0 1 
+H 0 0 0 1 0 1 1 0 0 0 0 
+I 0 0 0 0 0 1 0 0 0 0 0 
+a 0 0 1 0 0 0 0 1 0 0 0 
+z 0 0 0 0 0 0 0 0 0 0 0 
+------------------
+Matrice de valeurs
+------------------
+  A B C D E F G H I a z 
+A   2                   
+B                     4 
+C       4               
+D 2       2 2 2   2     
+E           3 3   3     
+F                     3 
+G                     1 
+H       1   1 1         
+I           2           
+a     0         0       
+z                       
+Fin de lecture des taches et contraintes
+
+---------------------------------
+Calcul du calendrier au plus tot et au plus tard
+---------------------------------
+			A	B	C	D	E	F	G	H	I	a	z	
+Rang			3	4	1	2	3	5	4	1	4	0	6	
+Date au plus tot	6	8	0	4	6	11	9	0	9	0	14	
+Date au plus tard	8	10	0	4	6	11	13	3	9	0	14	
+
+
+-----------------------
+Diagramme date au plus tot
+-----------------------
+	 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 
+A	 |  |  |  |  |  |  |==|==|  |  |  |  |  |  |  
+B	 |  |  |  |  |  |  |  |  |==|==|==|==|  |  |  
+C	 |==|==|==|==|  |  |  |  |  |  |  |  |  |  |  
+D	 |  |  |  |  |==|==|  |  |  |  |  |  |  |  |  
+E	 |  |  |  |  |  |  |==|==|==|  |  |  |  |  |  
+F	 |  |  |  |  |  |  |  |  |  |  |  |==|==|==|  
+G	 |  |  |  |  |  |  |  |  |  |==|  |  |  |  |  
+H	 |==|  |  |  |  |  |  |  |  |  |  |  |  |  |  
+I	 |  |  |  |  |  |  |  |  |  |==|==|  |  |  |  
+
+
+
+-----------------------
+Diagramme date au plus tard
+-----------------------
+	 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 
+A	 |  |  |  |  |  |  |  |  |==|==|  |  |  |  |  
+B	 |  |  |  |  |  |  |  |  |  |  |==|==|==|==|  
+C	 |==|==|==|==|  |  |  |  |  |  |  |  |  |  |  
+D	 |  |  |  |  |==|==|  |  |  |  |  |  |  |  |  
+E	 |  |  |  |  |  |  |==|==|==|  |  |  |  |  |  
+F	 |  |  |  |  |  |  |  |  |  |  |  |==|==|==|  
+G	 |  |  |  |  |  |  |  |  |  |  |  |  |  |==|  
+H	 |  |  |  |==|  |  |  |  |  |  |  |  |  |  |  
+I	 |  |  |  |  |  |  |  |  |  |==|==|  |  |  |  
+Program ended with exit code: 0

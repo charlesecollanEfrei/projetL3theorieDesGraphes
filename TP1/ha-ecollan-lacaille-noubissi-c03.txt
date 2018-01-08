@@ -1,0 +1,23 @@
+11
+A 9
+B 2
+C 3
+D 5
+E 2
+F 2
+G 2
+H 4
+I 5
+J 1
+K 2
+A.
+B.
+CB.
+DA.
+EAD.
+FE.
+GD.
+HDE.
+ID.
+JBC.
+KAEFGH.
